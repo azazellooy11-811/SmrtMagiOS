@@ -12,13 +12,16 @@ class ViewController: UIViewController {
     
     //@IBOutlet weak var inputLinkTextField: UITextField!
     //@IBOutlet weak var analyzeButton: UIButton!
+    private var remoteDataManager: RemoteDataManager!
+    private var models: [Model]?
     
     lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [githubLoginText,inputLinkTextField,analyzeButton])
-        stackView.axis = .vertical
+        let stackView = UIStackView(arrangedSubviews: [inputLinkTextField])
+        stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.spacing = 11
-        view.addSubview(stackView)
+        
+        
 
         return stackView
     }()
@@ -27,13 +30,13 @@ class ViewController: UIViewController {
         let githubLoginText = UILabel()
         view.addSubview(githubLoginText)
         githubLoginText.textColor = .black
-        githubLoginText.text = "Register"
+        githubLoginText.text = "Вставьте ссылку:"
         githubLoginText.font = .boldSystemFont(ofSize: 40)
 
         return githubLoginText
     }()
     
-    lazy var inputLinkTextField: UITextField = {
+    lazy var inputLinkTextField: UITextField! = {
         let inputLinkTextField = UITextField()
         inputLinkTextField.borderStyle = .roundedRect
         inputLinkTextField.text = "azazellooy11-811"
@@ -42,42 +45,58 @@ class ViewController: UIViewController {
         return inputLinkTextField
     }()
     
-    lazy var analyzeButton: UIButton = {
+    lazy var analyzeButton: UIButton! = {
         let analyzeButton = UIButton(type: .system)
-        analyzeButton.setTitleColor(.white, for: .normal)
-        analyzeButton.layer.cornerRadius = 30
+        analyzeButton.setTitleColor(.black, for: .normal)
+        analyzeButton.layer.cornerRadius = 60
         analyzeButton.backgroundColor = UIColor.yellowButtonColor
         analyzeButton.setTitle("Анализировать", for: .normal)
         view.addSubview(analyzeButton)
+        analyzeButton.addTarget(self, action: #selector(btnSomeButtonClicked), for: .touchUpInside)
 
         return analyzeButton
     }()
     
-    private var remoteDataManager: RemoteDataManager!
-    private var models: [Model]?
+   
     
     override func viewDidLoad() {
 
         super.viewDidLoad()
-        initialize()
+        addViews()
         remoteDataManager = RemoteDataManagerImplementation()
-        
+        view.backgroundColor = UIColor.blueBackgroundColor
         analyzeButton.layer.cornerRadius = analyzeButton.frame.height / 2
     }
-   
-    private func initialize(){
-        view.backgroundColor = UIColor.blueBackgroundColor
+    func addViews() {
+        view.addSubview(stackView)
         view.addSubview(githubLoginText)
-        view.addSubview(inputLinkTextField)
+//        view.addSubview(inputLinkTextField)
         view.addSubview(analyzeButton)
+        initConstraints()
+    }
+   
+    private func initConstraints() {
+        stackView.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(176)
+        }
+
+        analyzeButton.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.top.equalTo(stackView.snp.bottom).offset(21)
+        }
+        githubLoginText.snp.makeConstraints { maker in
+            maker.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(32.65)
+            maker.left.equalToSuperview().inset(16)
+        }
     }
 
-    @IBAction func analyzeButtonPressed(_ sender: Any) {
+    @objc func btnSomeButtonClicked(sender: UIButton){
         if inputLinkTextField.hasText {
             self.performSegue(withIdentifier: "tableVCSegue", sender: nil)
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "tableVCSegue"{
             if let statisticsTableViewController = segue.destination as? StatisticsTableViewController {
