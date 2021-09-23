@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4628F32426EFF52F00919FC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4628F32326EFF52F00919FC1 /* AppDelegate.swift */; };
 		4628F32626EFF52F00919FC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4628F32526EFF52F00919FC1 /* SceneDelegate.swift */; };
-		4628F32826EFF52F00919FC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4628F32726EFF52F00919FC1 /* ContentView.swift */; };
 		4628F32B26EFF52F00919FC1 /* SmrtMag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4628F32926EFF52F00919FC1 /* SmrtMag.xcdatamodeld */; };
 		4628F32D26EFF53200919FC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4628F32C26EFF53200919FC1 /* Assets.xcassets */; };
 		4628F33026EFF53200919FC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4628F32F26EFF53200919FC1 /* Preview Assets.xcassets */; };
@@ -20,6 +19,12 @@
 		4628F37C26EFF5BB00919FC1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4628F36226EFF59C00919FC1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4628F37E26EFF5C100919FC1 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4628F37726EFF5A500919FC1 /* SnapKit.framework */; };
 		4628F37F26EFF5C100919FC1 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4628F37726EFF5A500919FC1 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4648F34D26FA49E0005FD56B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F34C26FA49E0005FD56B /* ViewController.swift */; };
+		4648F34F26FA4BA1005FD56B /* RemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F34E26FA4BA1005FD56B /* RemoteDataManager.swift */; };
+		4648F35126FA4DEC005FD56B /* RepositoriesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F35026FA4DEC005FD56B /* RepositoriesResponseModel.swift */; };
+		4648F35326FA4E29005FD56B /* CommitsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F35226FA4E29005FD56B /* CommitsResponseModel.swift */; };
+		4648F35526FA4EE6005FD56B /* StatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F35426FA4EE6005FD56B /* StatisticsTableViewController.swift */; };
+		4648F35726FA55D6005FD56B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F35626FA55D6005FD56B /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,7 +133,6 @@
 		4628F32026EFF52F00919FC1 /* SmrtMag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmrtMag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4628F32326EFF52F00919FC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4628F32526EFF52F00919FC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4628F32726EFF52F00919FC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4628F32A26EFF52F00919FC1 /* SmrtMag.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SmrtMag.xcdatamodel; sourceTree = "<group>"; };
 		4628F32C26EFF53200919FC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4628F32F26EFF53200919FC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -142,6 +146,12 @@
 		4628F34A26EFF53200919FC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4628F35626EFF59C00919FC1 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		4628F37126EFF5A500919FC1 /* SnapKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SnapKit.xcodeproj; path = "SnapKit-develop/SnapKit.xcodeproj"; sourceTree = "<group>"; };
+		4648F34C26FA49E0005FD56B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4648F34E26FA4BA1005FD56B /* RemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataManager.swift; sourceTree = "<group>"; };
+		4648F35026FA4DEC005FD56B /* RepositoriesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesResponseModel.swift; sourceTree = "<group>"; };
+		4648F35226FA4E29005FD56B /* CommitsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsResponseModel.swift; sourceTree = "<group>"; };
+		4648F35426FA4EE6005FD56B /* StatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewController.swift; sourceTree = "<group>"; };
+		4648F35626FA55D6005FD56B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,14 +207,18 @@
 		4628F32226EFF52F00919FC1 /* SmrtMag */ = {
 			isa = PBXGroup;
 			children = (
-				4628F32326EFF52F00919FC1 /* AppDelegate.swift */,
-				4628F32526EFF52F00919FC1 /* SceneDelegate.swift */,
-				4628F32726EFF52F00919FC1 /* ContentView.swift */,
+				4648F35426FA4EE6005FD56B /* StatisticsTableViewController.swift */,
+				4648F34E26FA4BA1005FD56B /* RemoteDataManager.swift */,
+				4648F35026FA4DEC005FD56B /* RepositoriesResponseModel.swift */,
+				4648F35226FA4E29005FD56B /* CommitsResponseModel.swift */,
+				4648F34126FA4694005FD56B /* Application */,
+				4648F34C26FA49E0005FD56B /* ViewController.swift */,
 				4628F32C26EFF53200919FC1 /* Assets.xcassets */,
 				4628F33126EFF53200919FC1 /* LaunchScreen.storyboard */,
 				4628F33426EFF53200919FC1 /* Info.plist */,
 				4628F32926EFF52F00919FC1 /* SmrtMag.xcdatamodeld */,
 				4628F32E26EFF53200919FC1 /* Preview Content */,
+				4648F35626FA55D6005FD56B /* UIColorExtension.swift */,
 			);
 			path = SmrtMag;
 			sourceTree = "<group>";
@@ -264,6 +278,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4648F34126FA4694005FD56B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4628F32326EFF52F00919FC1 /* AppDelegate.swift */,
+				4628F32526EFF52F00919FC1 /* SceneDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,9 +503,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4648F35526FA4EE6005FD56B /* StatisticsTableViewController.swift in Sources */,
+				4648F34F26FA4BA1005FD56B /* RemoteDataManager.swift in Sources */,
+				4648F35326FA4E29005FD56B /* CommitsResponseModel.swift in Sources */,
+				4648F34D26FA49E0005FD56B /* ViewController.swift in Sources */,
 				4628F32426EFF52F00919FC1 /* AppDelegate.swift in Sources */,
+				4648F35726FA55D6005FD56B /* UIColorExtension.swift in Sources */,
 				4628F32626EFF52F00919FC1 /* SceneDelegate.swift in Sources */,
-				4628F32826EFF52F00919FC1 /* ContentView.swift in Sources */,
+				4648F35126FA4DEC005FD56B /* RepositoriesResponseModel.swift in Sources */,
 				4628F32B26EFF52F00919FC1 /* SmrtMag.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +681,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SmrtMag/Preview Content\"";
+				DEVELOPMENT_TEAM = P892TSAJ89;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SmrtMag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -673,6 +702,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SmrtMag/Preview Content\"";
+				DEVELOPMENT_TEAM = P892TSAJ89;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SmrtMag/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
