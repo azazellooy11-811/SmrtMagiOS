@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4624422626FF6A0F007A16EB /* StatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624422526FF6A0F007A16EB /* StatisticsTableViewController.swift */; };
+		4624422826FF6DA3007A16EB /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4624422726FF6DA3007A16EB /* UIImageExtension.swift */; };
 		4628F32426EFF52F00919FC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4628F32326EFF52F00919FC1 /* AppDelegate.swift */; };
 		4628F32626EFF52F00919FC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4628F32526EFF52F00919FC1 /* SceneDelegate.swift */; };
 		4628F32B26EFF52F00919FC1 /* SmrtMag.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4628F32926EFF52F00919FC1 /* SmrtMag.xcdatamodeld */; };
@@ -23,7 +25,6 @@
 		4648F34F26FA4BA1005FD56B /* RemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F34E26FA4BA1005FD56B /* RemoteDataManager.swift */; };
 		4648F35126FA4DEC005FD56B /* RepositoriesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F35026FA4DEC005FD56B /* RepositoriesResponseModel.swift */; };
 		4648F35326FA4E29005FD56B /* CommitsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F35226FA4E29005FD56B /* CommitsResponseModel.swift */; };
-		4648F35526FA4EE6005FD56B /* StatisticsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F35426FA4EE6005FD56B /* StatisticsTableViewController.swift */; };
 		4648F35726FA55D6005FD56B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648F35626FA55D6005FD56B /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +131,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4624422526FF6A0F007A16EB /* StatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewController.swift; sourceTree = "<group>"; };
+		4624422726FF6DA3007A16EB /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		4628F32026EFF52F00919FC1 /* SmrtMag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmrtMag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4628F32326EFF52F00919FC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4628F32526EFF52F00919FC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,7 +153,6 @@
 		4648F34E26FA4BA1005FD56B /* RemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataManager.swift; sourceTree = "<group>"; };
 		4648F35026FA4DEC005FD56B /* RepositoriesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesResponseModel.swift; sourceTree = "<group>"; };
 		4648F35226FA4E29005FD56B /* CommitsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsResponseModel.swift; sourceTree = "<group>"; };
-		4648F35426FA4EE6005FD56B /* StatisticsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewController.swift; sourceTree = "<group>"; };
 		4648F35626FA55D6005FD56B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,8 +209,8 @@
 		4628F32226EFF52F00919FC1 /* SmrtMag */ = {
 			isa = PBXGroup;
 			children = (
-				4648F35426FA4EE6005FD56B /* StatisticsTableViewController.swift */,
 				4648F34E26FA4BA1005FD56B /* RemoteDataManager.swift */,
+				4624422526FF6A0F007A16EB /* StatisticsTableViewController.swift */,
 				4648F35026FA4DEC005FD56B /* RepositoriesResponseModel.swift */,
 				4648F35226FA4E29005FD56B /* CommitsResponseModel.swift */,
 				4648F34126FA4694005FD56B /* Application */,
@@ -219,6 +221,7 @@
 				4628F32926EFF52F00919FC1 /* SmrtMag.xcdatamodeld */,
 				4628F32E26EFF53200919FC1 /* Preview Content */,
 				4648F35626FA55D6005FD56B /* UIColorExtension.swift */,
+				4624422726FF6DA3007A16EB /* UIImageExtension.swift */,
 			);
 			path = SmrtMag;
 			sourceTree = "<group>";
@@ -503,12 +506,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4648F35526FA4EE6005FD56B /* StatisticsTableViewController.swift in Sources */,
 				4648F34F26FA4BA1005FD56B /* RemoteDataManager.swift in Sources */,
 				4648F35326FA4E29005FD56B /* CommitsResponseModel.swift in Sources */,
 				4648F34D26FA49E0005FD56B /* ViewController.swift in Sources */,
+				4624422826FF6DA3007A16EB /* UIImageExtension.swift in Sources */,
 				4628F32426EFF52F00919FC1 /* AppDelegate.swift in Sources */,
 				4648F35726FA55D6005FD56B /* UIColorExtension.swift in Sources */,
+				4624422626FF6A0F007A16EB /* StatisticsTableViewController.swift in Sources */,
 				4628F32626EFF52F00919FC1 /* SceneDelegate.swift in Sources */,
 				4648F35126FA4DEC005FD56B /* RepositoriesResponseModel.swift in Sources */,
 				4628F32B26EFF52F00919FC1 /* SmrtMag.xcdatamodeld in Sources */,
