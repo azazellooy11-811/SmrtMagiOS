@@ -8,20 +8,47 @@
 import UIKit
 
 class StatisticsTableViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+    
     var models: [Model]?
-    var author: String!
+    //lazy var author = UILabel()
+    var author = ""
+    
     private var remoteDataManager: RemoteDataManager!
     
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+                    make.left.top.equalTo(self.view).offset(20)
+                    make.right.bottom.equalTo(self.view).offset(-20)
+        }
+        return tableView
+    }()
+    
+    init(authorTest:String) {
+        super.init(nibName: nil, bundle: nil)
+        author = authorTest
+  
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func addViews() {
+        view.addSubview(tableView)
+    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        addViews()
         tableView.dataSource = self
         tableView.delegate = self
         
         self.remoteDataManager = RemoteDataManagerImplementation()
         getModels()
     }
+     
     
     func getModels() {
         remoteDataManager.getCommits(author: author) { response in

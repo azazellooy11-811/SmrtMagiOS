@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         return githubLoginText
     }()
     
-    lazy var inputLinkTextField: UITextField! = {
+    lazy var inputLinkTextField: UITextField = {
         let inputLinkTextField = UITextField()
         inputLinkTextField.borderStyle = .roundedRect
         inputLinkTextField.text = "azazellooy11-811"
@@ -91,17 +91,25 @@ class ViewController: UIViewController {
         }
     }
 
-    @objc func btnSomeButtonClicked(sender: UIButton){
-        if inputLinkTextField.hasText {
-            self.performSegue(withIdentifier: "tableVCSegue", sender: nil)
+    @objc func btnSomeButtonClicked(sender: UIButton) {
+       
+        self.navigationController?.pushViewController(StatisticsTableViewController(authorTest: inputLinkTextField.text ?? ""), animated: true)
+            
         }
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "tableVCSegue"{
-            if let statisticsTableViewController = segue.destination as? StatisticsTableViewController {
-                statisticsTableViewController.author = inputLinkTextField.text
-            }
-        }
-    }
-}
+//    @objc func btnSomeButtonClicked(sender: UIButton){
+//        if inputLinkTextField.hasText {
+//            self.performSegue(withIdentifier: "tableVCSegue", sender: nil)
+//        }
+//    }
+    
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "tableVCSegue"{
+//            if let statisticsTableViewController = segue.destination as? StatisticsTableViewController {
+//                statisticsTableViewController.author = inputLinkTextField.text
+//            }
+//        }
+//    }
+
