@@ -13,11 +13,6 @@ protocol RemoteDataManager: AnyObject {
     func getCommits(author: String, completion: @escaping (Result<[Model], Error>) -> Void)
 }
 
-struct Model {
-    let name: String
-    let count: Int
-}
-
 class RemoteDataManagerImplementation: RemoteDataManager {
     
     func getRepositories(author: String, completion: @escaping (Result<[RepositoriesResponseModel], Error>) -> Void) {

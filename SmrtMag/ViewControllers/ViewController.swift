@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         stackView.spacing = 11
         
         
-
+        
         return stackView
     }()
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         githubLoginText.textColor = .black
         githubLoginText.text = "Вставьте ссылку:"
         githubLoginText.font = .boldSystemFont(ofSize: 40)
-
+        
         return githubLoginText
     }()
     
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         inputLinkTextField.borderStyle = .roundedRect
         inputLinkTextField.text = "azazellooy11-811"
         view.addSubview(inputLinkTextField)
-
+        
         return inputLinkTextField
     }()
     
@@ -53,14 +53,14 @@ class ViewController: UIViewController {
         analyzeButton.setTitle("Анализировать", for: .normal)
         view.addSubview(analyzeButton)
         analyzeButton.addTarget(self, action: #selector(btnSomeButtonClicked), for: .touchUpInside)
-
+        
         return analyzeButton
     }()
     
-   
+    
     
     override func viewDidLoad() {
-
+        
         super.viewDidLoad()
         addViews()
         remoteDataManager = RemoteDataManagerImplementation()
@@ -70,17 +70,17 @@ class ViewController: UIViewController {
     func addViews() {
         view.addSubview(stackView)
         view.addSubview(githubLoginText)
-//        view.addSubview(inputLinkTextField)
+        //        view.addSubview(inputLinkTextField)
         view.addSubview(analyzeButton)
         initConstraints()
     }
-   
+    
     private func initConstraints() {
         stackView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(16)
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(176)
         }
-
+        
         analyzeButton.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(16)
             make.top.equalTo(stackView.snp.bottom).offset(21)
@@ -90,26 +90,12 @@ class ViewController: UIViewController {
             maker.left.equalToSuperview().inset(16)
         }
     }
-
-    @objc func btnSomeButtonClicked(sender: UIButton) {
-       
-        self.navigationController?.pushViewController(StatisticsTableViewController(authorTest: inputLinkTextField.text ?? ""), animated: true)
-            
-        }
-    }
-
-//    @objc func btnSomeButtonClicked(sender: UIButton){
-//        if inputLinkTextField.hasText {
-//            self.performSegue(withIdentifier: "tableVCSegue", sender: nil)
-//        }
-//    }
     
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "tableVCSegue"{
-//            if let statisticsTableViewController = segue.destination as? StatisticsTableViewController {
-//                statisticsTableViewController.author = inputLinkTextField.text
-//            }
-//        }
-//    }
+    @objc func btnSomeButtonClicked(sender: UIButton) {
+        
+        self.navigationController?.pushViewController(StatisticsTableViewController(authorTest: inputLinkTextField.text ?? ""), animated: true)
+        
+    }
+}
+
 
